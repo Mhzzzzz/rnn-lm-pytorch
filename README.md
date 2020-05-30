@@ -20,8 +20,3 @@ You can use either rnn cell, gru cell or lstm cell. Change the configurations in
 ```bash
 python run_lm.py
 ```
-
-
-## References
-This code is based on dennybritz's [cnn-text-classification-tf](https://github.com/dennybritz/cnn-text-classification-tf).
-Many thanks!
