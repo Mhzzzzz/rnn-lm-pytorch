@@ -98,7 +98,7 @@ def main():
 			print('-----------------------------------------------------')
 			print('saving parameters')
 			os.makedirs('models', exist_ok=True)
-			model.save(model.state_dict(), 'model/lm-' + str(epoch) + '.pkl')
+			model.save(model.state_dict(), 'models/lm-' + str(epoch) + '.pkl')
 
 			with torch.no_grad():
 				# 生成文本
