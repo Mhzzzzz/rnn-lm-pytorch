@@ -102,7 +102,7 @@ def main():
 
 			with torch.no_grad():
 				# 生成文本
-				x = torch.LongTensor([[data_helper.w2i['_BOS']]] * 3)
+				x = torch.LongTensor([[data_helper.w2i['_BOS']]] * 3).to(device)
 				for i in range(MAX_GENERATE_LENGTH):
 					samp = model.sample(x)
 					x = torch.cat([x, samp], dim=1)
