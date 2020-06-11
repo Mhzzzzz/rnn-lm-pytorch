@@ -8,7 +8,6 @@ class LM(nn.Module):
 		self._cell = cell
 
 		self.embedding = nn.Embedding(vocab_size, embed_size)
-		self.rnn = None
 		if cell == 'rnn':
 			self.rnn = nn.RNN(embed_size, hidden_dim, num_layers, dropout=dropout_rate)
 		elif cell == 'gru':
