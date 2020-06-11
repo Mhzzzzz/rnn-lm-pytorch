@@ -68,7 +68,7 @@ class Corpus(object):
 			# sentence = list(filter(lambda x: x not in [None, ''], sentence.split()))
 			sentence = sentence.split()
 			if (len(sentence) >= self._min_len) and (len(sentence) <= self._max_len):
-				sentence = [self._vocabulary.w2i["_BOS"]] + sentence + [self._vocabulary.w2i["_EOS"]]
+				sentence = [['_BOS'] + sentence + ['_EOS']]
 				self.corpus.append(list(map(_transfer, sentence)))
 		self.corpus_length = [len(i) for i in self.corpus]
 		self.max_sentence_length = max(self.corpus_length)
